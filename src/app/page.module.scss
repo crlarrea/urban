@@ -6,6 +6,10 @@
   font-family: "linebeam";
   src: url("../app/fonts/Linebeam.ttf");
 }
+@font-face {
+  font-family: "blindish";
+  src: url("../app/fonts/BLINDSH.ttf");
+}
 
 .main {
   position: relative;
@@ -19,7 +23,50 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
+  h1 {
+    position: fixed;
+    color: white;
+    top: 2.5rem;
+    text-transform: uppercase;
+    font: {
+      family: "blindish";
+      size: 4.3rem;
+      weight: 200;
+    }
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  h2 {
+    position: fixed;
+    color: fuchsia;
+    bottom: 2.5rem;
+    text-transform: uppercase;
+    font: {
+      family: "blindish";
+      size: 4.3rem;
+      weight: 200;
+    }
+    width: 100%;
+    text-align: center;
+  }
+  h3 {
+    z-index: 1;
+    display: inline-flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: fixed;
+    color: cyan;
+    bottom: 0.5rem;
+    text-transform: uppercase;
+    font: {
+      family: "blindish";
+      size: 2rem;
+      weight: 200;
+    }
+    width: 100%;
+    text-align: center;
+  }
   article {
     scroll-snap-align: center;
     width: 100%;
@@ -88,7 +135,7 @@
     filter: drop-shadow(var(--shift) 0 0 cyan)
       drop-shadow(calc(-1 * var(--shift)) 0 0 red) blur(50px);
   }
-  animation: changeShadow 0.5s ease-in-out forwards infinite alternate;
+  animation: changeShadow 0.15s ease-in-out forwards infinite alternate;
 }
 
 .shadows {
@@ -137,7 +184,7 @@
 
   20%,
   60% {
-    background: rgba(black,0.7);
+    background: rgba(black, 0.7);
   }
 }
 
