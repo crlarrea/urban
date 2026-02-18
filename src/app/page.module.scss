@@ -46,6 +46,7 @@
       family: "blindish";
       size: 4.3rem;
       weight: 200;
+      isolation: isolate;
     }
     width: 100%;
     text-align: center;
@@ -98,7 +99,7 @@
     color: rgba(white, 0.3);
 
     font: {
-      size: 8rem;
+      size: 20rem;
       family: "linebeam";
       weight: 200;
     }
@@ -123,7 +124,7 @@
     width: 100%;
 
     font: {
-      size: 7rem;
+      size: 20rem;
       family: "linebeam";
       weight: 200;
     }
@@ -150,7 +151,7 @@
     width: 100%;
 
     font: {
-      size: 8rem;
+      size: 20rem;
       family: "linebeam";
       weight: 200;
     }
