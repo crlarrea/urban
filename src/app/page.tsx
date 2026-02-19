@@ -44,7 +44,7 @@ export default function Home() {
       <section
         className={styles.page}
         style={{
-          backgroundImage: `url("/person.png"), radial-gradient(circle at 50% 20%, ${styleState.backgroundColour}, black 70%)`,
+          backgroundImage: `url("/person.png"), radial-gradient(ellipse at 50% -50%, hsl(from ${styleState.backgroundColour} h s calc(l + 50)),${styleState.backgroundColour}, black)`,
           backgroundSize: "contain",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",

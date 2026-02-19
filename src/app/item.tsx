@@ -16,7 +16,12 @@ export default function Item({ description, backgroundColour, updateStyle }) {
 
   return (
     <article className={styles.item} ref={ref}>
-      <p style={{ color: backgroundColour }}>{description}</p>
+      <p
+        style={{ color: backgroundColour }}
+        className={entry?.isIntersecting ? styles.flicker : ""}
+      >
+        {description}
+      </p>
     </article>
   );
 }
