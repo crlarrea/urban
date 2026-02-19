@@ -3,7 +3,21 @@ import styles from "@/app/page.module.scss";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { useEffect } from "react";
 
-export default function Item({ description, backgroundColour, updateStyle }) {
+type StyleState = {
+  backgroundColour: string;
+};
+
+type ItemProps = {
+  description: string;
+  backgroundColour: string;
+  updateStyle: (state: StyleState) => void;
+};
+
+export default function Item({
+  description,
+  backgroundColour,
+  updateStyle,
+}: ItemProps) {
   const [ref, entry] = useIntersectionObserver({
     threshold: 1,
     root: null,
@@ -11,8 +25,10 @@ export default function Item({ description, backgroundColour, updateStyle }) {
   });
 
   useEffect(() => {
-    updateStyle({ backgroundColour: backgroundColour });
-  }, [entry?.isIntersecting]);
+    if (entry?.isIntersecting) {
+      updateStyle({ backgroundColour });
+    }
+  }, [entry?.isIntersecting, backgroundColour, updateStyle]);
 
   return (
     <article className={styles.item} ref={ref}>
